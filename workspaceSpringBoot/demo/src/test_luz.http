@@ -1,0 +1,12 @@
+### Probar creacion de luz
+POST http://localhost:8080/crearLuz
+Content-Type: application/json
+
+{
+    "nombre":"Lampara de pie",
+    "localizacion":"Salon"
+}
+
+### Petición para borrar el post 50 del usuario 1
+DELETE http://localhost:8080/usuarios/1/posts/50
+###
