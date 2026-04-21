@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserService {
+public class  UserService {
     //inyeccion de dependencias
     private final UserRepository repository;
     public UserService(UserRepository repository){
@@ -15,5 +15,13 @@ public class UserService {
     }
     public List<Usuario> getAllUsers(){
         return repository.findAll();
+    }
+
+    public Usuario guardar(Usuario nuevoUsuario){
+        return repository.save(nuevoUsuario);
+    }
+
+    public void borrarUsuario(Long id){
+        repository.deleteById(id);
     }
 }

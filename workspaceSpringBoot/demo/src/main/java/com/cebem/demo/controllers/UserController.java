@@ -2,8 +2,7 @@ package com.cebem.demo.controllers;
 
 import com.cebem.demo.entities.Usuario;
 import com.cebem.demo.service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -12,6 +11,7 @@ public class UserController {
     //inyeccion de dependencias
     private final UserService service;
     public UserController(UserService service){
+
         this.service=service;
     }
 
@@ -20,5 +20,16 @@ public class UserController {
     public List<Usuario> obtenerTodosLosUsuarios(){
         //UserService service=new UserService();
         return service.getAllUsers();
+    }
+
+    //TODO validaciones
+    @PostMapping("/api/users")
+    public Usuario crearUsuario(@RequestBody Usuario nuevoUsuario){
+        return service.guardar(nuevoUsuario);
+    }
+
+    @DeleteMapping("/users/(id)")
+    void borrarUsuario(@PathVariable Long id){
+
     }
 }
