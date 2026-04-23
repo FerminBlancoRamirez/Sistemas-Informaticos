@@ -5,6 +5,7 @@ import com.cebem.demo.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class  UserService {
@@ -23,5 +24,16 @@ public class  UserService {
 
     public void borrarUsuario(Long id){
         repository.deleteById(id);
+    }
+
+    public Usuario modificarUsuario(Long id, Usuario usuario){
+        Optional<Usuario> userAModificar=repository.findById(id);
+        if (userAModificar.isPresent()) {
+            userAModificar.setEmail(usuario.getEmail());
+            userAModificar.setName(usuario.getName());
+            repository.save(userAModificar);
+        }else {
+            throw new RuntimeException("El usuario no existe");
+        }
     }
 }

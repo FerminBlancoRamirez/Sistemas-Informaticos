@@ -30,6 +30,12 @@ public class UserController {
 
     @DeleteMapping("/users/(id)")
     void borrarUsuario(@PathVariable Long id){
+        service.borrarUsuario(id);
+    }
 
+    @PutMapping("/users/(id)")
+    public Usuario modificarUsuario(@PathVariable Long id,
+                                    @RequestBody Usuario usuario){
+        return service.modificarUsuario(id, usuario);
     }
 }
