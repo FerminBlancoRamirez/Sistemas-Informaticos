@@ -26,7 +26,7 @@ public class UserController {
     }
 
     //TODO validaciones
-    @PostMapping("/api")
+    @PostMapping
     public Usuario crearUsuario(@RequestBody @Valid Usuario nuevoUsuario){
         return service.guardar(nuevoUsuario);
     }

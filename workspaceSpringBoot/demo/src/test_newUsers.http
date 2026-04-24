@@ -1,9 +1,9 @@
 ### Crear un nuevo usuario
-POST http://localhost:8080/api/users
+POST http://localhost:8080/users
 Content-Type: application/json
 
 {
-  "name": "Carlos Perez",
-  "email": "carlos@example.com",
-  "password": "Carlos1234"
+  "name": "Manu",
+  "email": "Manu@example.com",
+  "password": "Manu1234"
 }
