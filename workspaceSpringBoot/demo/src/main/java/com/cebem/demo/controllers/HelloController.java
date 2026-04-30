@@ -5,11 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
-    //https://localhost:8080
-    @GetMapping("/")
-    public String sayHello(){
-        return "Hello, world";//un saludo normal
-    }
+
 
     //http://localhost:8080/encender
     @GetMapping("/encender")
