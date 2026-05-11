@@ -1,0 +1,26 @@
+body{
+    background-color: antiquewhite;
+    padding: 20px;
+}
+button{
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.usuarios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.usuario_card{
+    background-color: aliceblue;
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 15px;
+    transition: transform 0.3s;
+    box-shadow: 0px 10px 26px 14px rgba(0,0,0,0.1);
+}
+.usuario_card:hover{
+    
+}

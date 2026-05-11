@@ -3,8 +3,8 @@ async function cargarUsuarios(){
     //react, vue, ....
     //obtenemos los usuarios en modo json
     //Codigo imperativo: mal!!!!!, mejor usar codigo reactivo
-    const response= await fetch("http://localhost:8080/users");//GET 1s //cojo todo lo que me da el get
-    const usuario= await response.json()//lo convierto a un idioma con el que pueda trabajar java script
+    const response= await fetch("http://localhost:8080/users");//GET 1s
+    const usuario= await response.json()
     const contenedor=document.getElementById("usuarios")
     contenedor.innerHTML=""
 
